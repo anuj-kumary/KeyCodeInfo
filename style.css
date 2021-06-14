@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+body{
+    background: #f2f4f8;;
+   overflow: hidden;
+   font-family: 'Montserrat', sans-serif;
+}
+header{
+    width: 100%;
+    height: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+}
+nav{
+    display: flex;
+    margin: 20px 30px;
+    
+    height: auto;
+    float: right;
+}
+button{
+    padding: 8px 18px;
+    border-radius: 10px;
+    outline: none;
+    border-style: none;
+    border: 1px solid #111;
+    font-size: 16px;
+    letter-spacing: 1.2px;
+    cursor: pointer;
+}
+
+.container{
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+   
+}
+.heading{
+    min-width: 25px;
+    margin: 20px auto;
+    padding:15px 20px;
+    text-align: center;
+    height: auto;
+    font-size: 26px;
+    font-weight: 400;
+    color:#4B5563 ;
+    box-shadow: 0 14px 26px rgb(0 0 0 / 4%);
+    border: 1px solid rgba(0, 0, 0, 0.11);
+}
+.hide{
+    display: none;
+}
+  #keycode-display{
+   font-size: 40vmin;
+   color:#4B5563 ;
+}
+.wrapper{
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    width: 100%;
+}
+.items{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    position: absolute;
+    top: 22rem;
+    width: 100%;
+}
+.item{
+    width: 22%;
+    height: 100px;
+    box-shadow: 0 14px 26px rgb(0 0 0 / 4%);
+    border: 1px solid rgba(0, 0, 0, 0.11);
+}
+
+p{
+    text-align: center;
+}
+span{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 20px;
+}
+.title{
+    background-color: lightblue;
+    width: 100%;
+    padding:5px 0;
+}
+
+
+@media(max-width:800px){
+    .container{
+        width: 80%;
+    }
+    .items{
+        display: grid;
+        grid-template-columns: auto auto;
+        align-items: center;
+        gap: 20px;
+        justify-content: space-evenly;
+        width: 100%;
+    }
+    .item{
+        width: 100%;
+    }
+    .title{
+        padding: 5px 10px;
+    }
+    .heading{
+        width: 100%;
+    }
+
+}
