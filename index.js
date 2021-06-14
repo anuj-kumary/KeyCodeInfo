@@ -4,6 +4,8 @@ const eventWhich = document.getElementById('eventwhich');
 const eventKey = document.getElementById('eventkey');
 const userValue = document.getElementById('keycode-display');
 const heading = document.getElementById('value');
+const cardItem = document.querySelector('.wrapper');
+console.log(cardItem)
 
 document.body.addEventListener('keydown', function(event){
     var keyCode = event.keyCode;
@@ -20,6 +22,7 @@ document.body.addEventListener('keydown', function(event){
     eventWhich.innerHTML = keyWhich;
 
     heading.classList.add('hide');
+    cardItem.classList.add('show');
 })
 
 
