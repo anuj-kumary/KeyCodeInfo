@@ -12,7 +12,7 @@ body{
     background: #f2f4f8;
     height: 100%;
     font-size: 16px;
-   font-family: 'Montserrat', sans-serif;
+    font-family: 'Montserrat', sans-serif;
 }
 header{
     width: 100%;
@@ -130,29 +130,6 @@ a{
 }
 
 
-@media (min-width:450px){
-    .items{
-        top: 25rem;
-    }
-    .social{
-        top: -80px;
-        letter-spacing: 1.2px;
-        font-size: 16px;
-    }
-    
-
-}
-
-@media(max-width:375px){
-    .items{
-        top: 21rem;
-    }
-    .social{
-        top:-10px
-    }
-}
-
-
 
 @media(max-width:800px){
     .container{
@@ -179,3 +156,30 @@ a{
 
 }
 
+@media (max-width:500px){
+    .container{
+        width: 100%;
+    }
+    #keycode-display{
+       position: relative;
+       top: -50px;
+     }
+    .items{
+        display: grid;
+        grid-template-columns: auto;
+        gap: 20px;
+        width: 100%;
+        top: 20rem;
+        justify-content: inherit;
+    }
+    .social{
+        top: 60px;
+    }
+    
+}
+
+@media (max-width:380px){
+    .social{
+        top: 150px;
+    }
+}
