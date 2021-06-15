@@ -43,6 +43,12 @@ button{
     left: 50%;
     transform: translate(-50%,-50%);
 }
+.shows{
+    display: none;
+}
+.userValue{
+    display: block;
+}
 .heading{
     min-width: 25px;
     margin: 20px auto;

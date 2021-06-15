@@ -5,6 +5,7 @@ const eventKey = document.getElementById('eventkey');
 const userValue = document.getElementById('keycode-display');
 const heading = document.getElementById('value');
 const cardItem = document.querySelector('.wrapper');
+const userValues = document.getElementById('user-value');
 console.log(cardItem)
 
 document.body.addEventListener('keydown', function(event){
@@ -23,7 +24,15 @@ document.body.addEventListener('keydown', function(event){
 
     heading.classList.add('hide');
     cardItem.classList.add('show');
+
+
+    if (mediaQuery.matches) {
+        // Then trigger an alert
+        console.log('Media Query Matched!');
+        userValues.classList.add('userValue');
+      }
 })
 
 
-
+const mediaQuery = window.matchMedia('(max-width: 500px)')
+// Check if the media query is true
