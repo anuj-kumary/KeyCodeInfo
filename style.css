@@ -14,6 +14,82 @@ body{
     font-size: 16px;
     font-family: 'Montserrat', sans-serif;
 }
+.hides{
+    display: none;
+  }
+.table{
+    width: 50%;
+    table-layout: fixed;
+    margin: auto;
+    margin-top: 5vh;
+    box-shadow: 0 14px 26px rgba(0, 0, 0, 0.04);
+    border-radius: 5px;
+    border-collapse: collapse;
+    display: block;
+}
+
+.table-body{
+    display: block;
+    width: 50%;
+    overflow: auto;
+    height: 77vh;
+    background: #fff;
+    position: absolute;
+    z-index: 1;
+
+}
+.table thead tr{
+    display: block;
+    border-radius: 5px;
+}
+.table thead{
+    font-size: 12px;
+    font-weight: 600;
+    border-bottom: 1px solid #111;
+    /* background: #111; */
+}
+.table th,
+.table td{
+    padding: 0.3rem 1rem;
+    text-align: left;
+    min-width: 100px;
+    font-size: 1.2rem;
+  }
+  
+  .table th {
+    padding: 0.5rem 1rem;
+  }
+  /* .table td {
+    border-bottom: 1px solid var(--table-separator);
+  } */
+  .table tbody tr:hover {
+    background-color: rgba(0, 0, 0, 0.075);
+  }
+  .table-toggle-button {
+    font: bold 16px arial;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    color: var(--button);
+    /* border: 2px solid var(--button); */
+    background: transparent;
+    border-radius: 5px;
+    padding: 5px 10px;
+    transition: all 0.3s ease-out;
+    cursor: pointer;
+  }
+  
+  .table-toggle-button:hover {
+    transform: translateY(-2px) scale(1.005) translateZ(0);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.11),
+      0 6px 9px var(--card-hover);
+  }
+  
+  .table-toggle-button:active {
+    transform: translateY(2px) scale(0.995) translateZ(0);
+    box-shadow: none;
+  }
+  
 header{
     width: 100%;
     height: 100vh;
@@ -150,6 +226,21 @@ a{
     }
 
 }
+@media (max-width: 600px) {
+    body {
+      overflow-y: auto;
+    }
+    
+    .table {
+      width: 100%;
+      margin-top: 4rem;
+    }
+    .table-body {
+      height: 60vh;
+    }
+  }
+  
+  
 
 @media (max-width:500px){
     .container{
