@@ -9,8 +9,6 @@ const userValues = document.getElementById('user-value');
 const toggleBtn = document.getElementById('click');
 const tableHide = document.querySelector('.table');
 
-
-
 const keyCodes = {
     0: 'That key has no keycode',
     3: 'break',
@@ -193,36 +191,32 @@ const keyCodes = {
     244: 'kanji',
     251: 'unlock trackpad (Chrome/Edge)',
     255: 'toggle touchpad',
-  };
+};
 
-
-  function createTable() {
+function createTable() {
     const tableBody = document.querySelector('.table-body');
     for (const key in keyCodes) {
-      var row = document.createElement('tr');
-      row.innerHTML += `<td>${key}</td>`;
-      row.innerHTML += `<td>${keyCodes[key]}</td>`;
-      tableBody.appendChild(row);
+        var row = document.createElement('tr');
+        row.innerHTML += `<td>${key}</td>`;
+        row.innerHTML += `<td>${keyCodes[key]}</td>`;
+        tableBody.appendChild(row);
     }
-  }
-  createTable();
+}
+createTable();
 
-  toggleBtn.addEventListener('click', function(){
-    if(tableHide.classList.contains('hides')){
+toggleBtn.addEventListener('click', function () {
+    if (tableHide.classList.contains('hides')) {
         tableHide.classList.remove('hides')
         tableHide.classList.add('table')
-    }else{
+    } else {
         tableHide.classList.remove('table')
         tableHide.classList.add('hides')
     }
-  const hidden = tableHide.classList.contains('hides');
-  document.querySelector('.table-toggle-button').textContent = hidden ? 'Table' : '⬅';
+    const hidden = tableHide.classList.contains('hides');
+    document.querySelector('.table-toggle-button').textContent = hidden ? 'Table' : '⬅';
 })
-  
 
-
-
-document.body.addEventListener('keydown', function(event){
+document.body.addEventListener('keydown', function (event) {
     var keyCode = event.keyCode;
     eventCode.innerHTML = keyCode;
     userValue.innerHTML = keyCode;
@@ -238,7 +232,5 @@ document.body.addEventListener('keydown', function(event){
 
     heading.classList.add('hide');
     cardItem.classList.add('show');
-
-    
 })
 
