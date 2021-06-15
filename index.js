@@ -208,15 +208,14 @@ const keyCodes = {
   createTable();
 
   toggleBtn.addEventListener('click', function(){
-    if(tableHide.classList.contains('table')){
-      tableHide.classList.add('hides')
-      tableHide.classList.remove('table')
+    if(tableHide.classList.contains('hides')){
+        tableHide.classList.remove('hides')
+        tableHide.classList.add('table')
     }else{
-      tableHide.classList.remove('hides')
-      tableHide.classList.add('table')
-     
+        tableHide.classList.remove('table')
+        tableHide.classList.add('hides')
     }
-  const hidden = tableHide.classList.contains('hide');
+  const hidden = tableHide.classList.contains('hides');
   document.querySelector('.table-toggle-button').textContent = hidden ? 'Table' : '⬅';
 })
   

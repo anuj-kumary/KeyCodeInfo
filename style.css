@@ -14,9 +14,6 @@ body{
     font-size: 16px;
     font-family: 'Montserrat', sans-serif;
 }
-.hides{
-    display: none;
-  }
 .table{
     width: 50%;
     table-layout: fixed;
@@ -27,6 +24,9 @@ body{
     border-collapse: collapse;
     display: block;
 }
+.hides{
+    display: none;
+  }
 
 .table-body{
     display: block;
@@ -237,11 +237,9 @@ a{
     }
     .table-body {
       height: 60vh;
+      width: 100%;
     }
   }
-  
-  
-
 @media (max-width:500px){
     .container{
         width: 100%;
